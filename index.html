@@ -38,15 +38,15 @@
 
     <!-- to do list container -->
     <div class="todo_list">
-      <!-- usiamo un v-for per creare la lista dall'array todolist dell'app vue -->
+      <!-- usiamo un v-for per creare la lista dall'array todolist dell'app vue, inoltre dobbiamo inserire l'indice, che ci sarà utile per eliminare la singola todo -->
       <ul>
         <!-- esempio elemento della lista -->
         <!-- <li>
           <span>fare la spesa</span>
           <i class="far fa-times-circle"></i>
         </li> -->
-        <li v-for='todo in todoList'><span>{{todo}}</span>
-        <i class="far fa-times-circle"></i></li>
+        <li v-for='(todo, todoIndex) in todoList'><span>{{todoIndex + ' ' + todo}}</span>
+        <i class="far fa-times-circle" @click='deleteTodo(todoIndex)'></i></li>
 
       </ul>
     </div>
@@ -68,8 +68,8 @@
             <i class="far fa-times-circle"></i><i class="fas fa-recycle"></i>
           </li> -->
 
-          <li v-for='deleted in deletedList'><span>{{deleted}}</span>
-          <i class="far fa-times-circle"></i><i class="fas fa-recycle"></i></li>
+          <li v-for='(deleted, deletedIndex) in deletedList'><span>{{deletedIndex + ' ' + deleted}}</span>
+          <i class="far fa-times-circle" @click='deleteForver(deletedIndex)'></i><i class="fas fa-recycle"></i></li>
         </ul>
       </div>
 

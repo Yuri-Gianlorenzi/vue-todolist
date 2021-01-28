@@ -97,7 +97,7 @@ header {
   background-color: rgba(217, 217, 217, 0.37);
   border-radius: 5px;
   border: 2px solid black;
-  overflow-y: scroll;
+  overflow-y: auto;
   min-height: 250px;
 }
 
@@ -116,6 +116,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
+}
+
+.todo_list ul li:hover {
+  background-color: rgba(231, 231, 231, 0.37);
+  transform: scale(1.01);
 }
 
 .todo_list ul li span {
@@ -146,7 +152,7 @@ header {
   background-color: rgba(217, 217, 217, 0.37);
   border-radius: 5px;
   border: 2px solid black;
-  overflow-y: scroll;
+  overflow-y: auto;
 
 }
 
@@ -165,6 +171,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
+
+}
+
+.deleted_todo_list ul li:hover {
+  background-color: rgba(231, 231, 231, 0.37);
+  transform: scale(1.01);
 }
 
 .deleted_todo_list ul li span {

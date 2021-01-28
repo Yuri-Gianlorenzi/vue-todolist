@@ -17,6 +17,13 @@ var app = new Vue ({
   },//fine data
 
   methods : {
+    deleteTodo (todoIndex) {
+      //qui usiamo come argomento della funzione l'index dell'elemento, questo verrà passato al metodo splice, che elimina esattamente l'elemento con quell'index
+      this.todoList.splice(todoIndex, 1);
+    },//fine delete todo
 
+    deleteForver (deletedIndex) {
+      this.deletedList.splice(deletedIndex, 1);
+    }//fine deletedForever
   }//fine methods
 });

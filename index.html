@@ -70,7 +70,7 @@
           </li> -->
 
           <li v-for='(deleted, deletedIndex) in deletedList'><span>{{deletedIndex + ' ' + deleted}}</span>
-          <i class="far fa-times-circle" @click='deleteForver(deletedIndex)'></i><i class="fas fa-recycle"></i></li>
+          <i class="far fa-times-circle" @click='deleteForver(deletedIndex)'></i><i class="fas fa-recycle" @click='moveToList(deletedIndex)'></i></li>
         </ul>
         <h2 v-else>Il cestino è vuoto</h2>
       </div>

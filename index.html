@@ -38,9 +38,16 @@
 
     <!-- to do list container -->
     <div class="todo_list">
+      <!-- usiamo un v-for per creare la lista dall'array todolist dell'app vue -->
       <ul>
-        <li><span>fare la spesa con i miei amici e poi andare a giocare a calcio per poi farsi male e tornare a casa dalla mamma a piangere Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span><i class="far fa-times-circle"></i></li>
-        <li><span>fare la spesa con i miei amici e poi andare a giocare a calcio per poi farsi male e tornare a casa dalla mamma a piangere Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span><i class="far fa-times-circle"></i></li>
+        <!-- esempio elemento della lista -->
+        <!-- <li>
+          <span>fare la spesa</span>
+          <i class="far fa-times-circle"></i>
+        </li> -->
+        <li v-for='todo in todoList'><span>{{todo}}</span>
+        <i class="far fa-times-circle"></i></li>
+
       </ul>
     </div>
     <!-- / todo list container -->
@@ -55,8 +62,14 @@
       <!-- lista todo eliminate temporaneamente -->
       <div class="deleted_todo_list">
         <ul>
-          <li><span>fare la spesa con i miei amici e poi andare a giocare a calcio per poi farsi male e tornare a casa dalla mamma a piangere Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span><i class="far fa-times-circle"></i><i class="fas fa-recycle"></i></li>
-          <li><span>fare la spesa con i miei amici e poi andare a giocare a calcio per poi farsi male e tornare a casa dalla mamma a piangere Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span><i class="far fa-times-circle"></i><i class="fas fa-recycle"></i></li>
+          <!-- esempio elemento lista eliminata -->
+          <!-- <li>
+            <span>fare la spesa</span>
+            <i class="far fa-times-circle"></i><i class="fas fa-recycle"></i>
+          </li> -->
+
+          <li v-for='deleted in deletedList'><span>{{deleted}}</span>
+          <i class="far fa-times-circle"></i><i class="fas fa-recycle"></i></li>
         </ul>
       </div>
 

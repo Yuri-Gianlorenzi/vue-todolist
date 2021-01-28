@@ -97,7 +97,8 @@ header {
   background-color: rgba(217, 217, 217, 0.37);
   border-radius: 5px;
   border: 2px solid black;
-
+  overflow-y: scroll;
+  min-height: 250px;
 }
 
 .todo_list ul {
@@ -122,12 +123,15 @@ header {
   width: 90%;
 }
 
+
+
 /* / TODO LIST CONTAINER ----------------------------------- */
 
 /* DELETED TODO LIST CONTAINER */
 
 .deleted_todo {
   margin-top: 20px;
+  min-height: 250px;
 }
 
 .deleted_todo h2 {
@@ -136,10 +140,13 @@ header {
 
 .deleted_todo_list {
   width: 90%;
+  min-height: 50px;
+  max-height: 220px;
   margin: auto;
   background-color: rgba(217, 217, 217, 0.37);
   border-radius: 5px;
   border: 2px solid black;
+  overflow-y: scroll;
 
 }
 

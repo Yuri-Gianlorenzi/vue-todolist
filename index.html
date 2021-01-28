@@ -38,8 +38,8 @@
 
     <!-- to do list container -->
     <div class="todo_list">
-      <!-- usiamo un v-for per creare la lista dall'array todolist dell'app vue, inoltre dobbiamo inserire l'indice, che ci sarà utile per eliminare la singola todo -->
-      <ul>
+      <!-- usiamo un v-for per creare la lista dall'array todolist dell'app vue, inoltre dobbiamo inserire l'indice, che ci sarà utile per eliminare la singola todo. nel caso in cui non ci siano elementi, con v-if/v-else facciamo apparire una scritta esplicativa -->
+      <ul v-if='todoList.length > 0'>
         <!-- esempio elemento della lista -->
         <!-- <li>
           <span>fare la spesa</span>
@@ -49,6 +49,7 @@
         <i class="far fa-times-circle" @click='deleteTodo(todoIndex)'></i></li>
 
       </ul>
+      <h2 v-else>Non ci sono elementi nella lista</h2>
     </div>
     <!-- / todo list container -->
 
@@ -61,7 +62,7 @@
 
       <!-- lista todo eliminate temporaneamente -->
       <div class="deleted_todo_list">
-        <ul>
+        <ul v-if='deletedList.length > 0'>
           <!-- esempio elemento lista eliminata -->
           <!-- <li>
             <span>fare la spesa</span>
@@ -71,6 +72,7 @@
           <li v-for='(deleted, deletedIndex) in deletedList'><span>{{deletedIndex + ' ' + deleted}}</span>
           <i class="far fa-times-circle" @click='deleteForver(deletedIndex)'></i><i class="fas fa-recycle"></i></li>
         </ul>
+        <h2 v-else>Il cestino è vuoto</h2>
       </div>
 
     </div>

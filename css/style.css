@@ -99,6 +99,9 @@ header {
   border: 2px solid black;
   overflow-y: auto;
   min-height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .todo_list ul {
@@ -106,6 +109,7 @@ header {
   margin: auto;
   /* background-color: green; */
 }
+
 
 .todo_list ul li {
   flex-wrap: wrap;
@@ -153,7 +157,13 @@ header {
   border-radius: 5px;
   border: 2px solid black;
   overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.deleted_todo_list h2 {
+  margin-top: 15px;
 }
 
 .deleted_todo_list ul {

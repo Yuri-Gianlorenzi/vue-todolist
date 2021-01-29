@@ -62,6 +62,15 @@ var app = new Vue ({
       } else {
         this.todoList.push(this.newTodo);
       }
-    }//fine addtodo
+    },//fine addtodo
+
+    reuseAllDeleted () {
+      //qui creiamo la funzione che mi permette di spostare tutto il contenuto della deletedList all'interno della todoList, e cancellare successivamente tutto dalla deletedList
+      for (let i = 0; i < this.deletedList.length; i++) {
+        this.todoList.push(this.deletedList[i]);
+      }
+
+      this.deletedList.splice(0, this.deletedList.length);
+    }//fine reuseAllDeletedall
   }//fine methods
 });

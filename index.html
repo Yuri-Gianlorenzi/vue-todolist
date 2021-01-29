@@ -47,6 +47,7 @@
           <i class="far fa-times-circle"></i>
         </li> -->
         <li v-for='(todo, todoIndex) in todoList'><span>{{todoIndex + ' ' + todo}}</span>
+        <i class="fas fa-exchange-alt"></i>
         <i class="far fa-times-circle" @click='deleteTodo(todoIndex)'></i></li>
 
       </ul>
@@ -58,7 +59,7 @@
     <div class="deleted_todo">
       <!-- contenitore titolo con elimina tutto -->
       <div class="delete_all">
-        <h2>Lista elementi eliminati <i @click='deleteTrash' class="far fa-trash-alt"></i></h2>
+        <h2>Lista elementi eliminati <i @click='deleteTrash' class="far fa-trash-alt"></i><i @click='reuseAllDeleted' class="fas fa-recycle"></i></h2>
       </div>
 
       <!-- lista todo eliminate temporaneamente -->

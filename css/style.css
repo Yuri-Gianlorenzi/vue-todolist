@@ -151,11 +151,16 @@ button.all_to_trash {
 
 .deleted_todo h2 {
   margin-bottom: 15px;
+  /* margin-right: 10px; */
 }
 
 .delete_all i {
   cursor: pointer;
+  margin-right: 20px;
+  margin-left: 10px;
 }
+
+
 
 .deleted_todo_list {
   width: 90%;

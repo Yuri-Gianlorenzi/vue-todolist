@@ -82,7 +82,12 @@ header {
   border-radius: 5px;
   border: 2px solid black;
   /* color: #6c899a; */
+  cursor: pointer;
+}
 
+
+button.all_to_trash {
+  width: 150px;
 }
 
 

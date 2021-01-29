@@ -12,7 +12,8 @@ var app = new Vue ({
       'pulsante per eliminare tutti i todo del cestino'
     ],
     deletedList : [],
-    newTodo : ''
+    newTodo : '',
+    changedTodo : ''
 
   },//fine data
 
@@ -71,6 +72,18 @@ var app = new Vue ({
       }
 
       this.deletedList.splice(0, this.deletedList.length);
-    }//fine reuseAllDeletedall
+    },//fine reuseAllDeletedall
+
+    changeTodo (todoIndex) {
+      //qui creiamo la funzione che modifica il singolo elemento della todoList, al click deve partire il prompt, li si ha la possibilitare il todo, sempre che vengano inseriti almeno 4 caratteri
+      this.changedTodo = prompt('Modifica il todo', this.todoList[todoIndex]);
+      if (this.changedTodo.length > 3) {
+        //con questo splice prendiamo l'elemento che ha quel preciso indice selezionato e lo sostutuisca con quello appena digitato dall'utente
+        this.todoList.splice(todoIndex, 1, this.changedTodo);
+        // this.todoList.splice(todoIndex, 0, this.changedTodo);
+      } else {
+        alert('devi inserire almeno 4 caratteri');
+      }
+    }
   }//fine methods
 });

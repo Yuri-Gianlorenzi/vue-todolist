@@ -47,7 +47,7 @@
           <i class="far fa-times-circle"></i>
         </li> -->
         <li v-for='(todo, todoIndex) in todoList'><span>{{todoIndex + ' ' + todo}}</span>
-        <i class="fas fa-exchange-alt"></i>
+        <i class="fas fa-exchange-alt" @click='changeTodo(todoIndex)'></i>
         <i class="far fa-times-circle" @click='deleteTodo(todoIndex)'></i></li>
 
       </ul>

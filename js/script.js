@@ -2,22 +2,17 @@ var app = new Vue ({
   el : '#app',
   data : {
     todoList : [
-      'creare il logo',
-      'creare la lista todo',
+      'inserire il nuovo todo',
+      'modificare un todo',
       'creare la lista deleted',
-      'implementare tulle le funzioni possibili e immaginabili',
-      'creare il logo',
-      'creare la lista todo',
-      'creare la lista deleted',
-      'implementare tulle le funzioni possibili e immaginabili',
-      'creare il logo',
-      'creare la lista todo',
-      'creare la lista deleted',
-      'implementare tulle le funzioni possibili e immaginabili'
+      'spostare il todo nel cestino',
+      'pulsante per spostare tutti i todo nel cestino',
+      'ripristinare dal cestino un todo',
+      'eliminare definitivamente un todo dal cestino',
+      'pulsante per eliminare tutti i todo del cestino'
     ],
-    deletedList : [
-
-    ]
+    deletedList : [],
+    newTodo : ''
 
   },//fine data
 
@@ -55,8 +50,18 @@ var app = new Vue ({
     },//fine moveToTrash
 
     deleteTrash () {
+      //qui rimuoviamo completamente la deletedList
       this.deletedList.splice(0, this.deletedList.length);
-    }//fine deleteTrash
+    },//fine deleteTrash
 
+    addTodo () {
+      // qui inseriamo un nuovo todo nella todolist, usiamo v-model per ascoltare l'input, al click del bottone, se l'utente ha digitato almeno 4 caratteri, questa stringa viene pushata dentro la todoList assieme agli altri elementi dell'array
+      // let newTodo = '';
+      if (this.newTodo.length < 4) {
+        alert('almeno 4 caratteri');
+      } else {
+        this.todoList.push(this.newTodo);
+      }
+    }//fine addtodo
   }//fine methods
 });

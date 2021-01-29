@@ -31,8 +31,8 @@
 
     <!-- contenitore input todo -->
     <div class="add_todo">
-      <input type="text" name="" value="" placeholder="Aggiungi ToDo">
-      <button type="button" name="button">Aggiungi</button>
+      <input type="text" v-model="newTodo" placeholder="Aggiungi ToDo">
+      <button @click='addTodo' type="button" name="button">Aggiungi</button>
       <button @click='deleteList' type="button" name="button" class="all_to_trash">Sposta la lista nel cestino</button>
     </div>
     <!-- / contenitore input todo -->

@@ -153,6 +153,10 @@ button.all_to_trash {
   margin-bottom: 15px;
 }
 
+.delete_all i {
+  cursor: pointer;
+}
+
 .deleted_todo_list {
   width: 90%;
   min-height: 50px;
